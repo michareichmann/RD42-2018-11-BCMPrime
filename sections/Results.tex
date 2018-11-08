@@ -38,7 +38,6 @@
 
 	\begin{itemize}\itemfill
 		\item all signal polarities are opposite of the bias 
-		\item pumping at higher rate induces leakage current in the sensor
 	\end{itemize}\vspace*{-10pt}
 	
 	\only<1>{\fig[r]{.4}{WF200-0}[Single waveform 0 \SI[retain-explicit-plus]{+200}{\volt}]}
@@ -51,6 +50,46 @@
 	
 	\begin{itemize}
 		\item pulses usually have a flattish top and probably don't reach the maximum
+	\end{itemize}
+	
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FRAME 3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Negative Bias}
+
+	\begin{itemize}\itemfill
+		\item all signal polarities are opposite of the bias 
+	\end{itemize}\vspace*{-10pt}
+	
+	\only<1>{\fig[r]{.4}{WF200N-0}[Single waveform 0 \SI[retain-explicit-plus]{-200}{\volt}]}
+	\only<2>{\fig[r]{.4}{WF200N-1}[Single waveform 1 \SI[retain-explicit-plus]{-200}{\volt}]}
+	\only<3>{\fig[r]{.4}{WF200N-2}[Single waveform 2 \SI[retain-explicit-plus]{-200}{\volt}]}
+	\only<4>{\fig[r]{.4}{WF200N-3}[Single waveform 3 \SI[retain-explicit-plus]{-200}{\volt}]}
+	\only<5>{\fig[r]{.4}{WF200N-4}[Single waveform 4 \SI[retain-explicit-plus]{-200}{\volt}]}
+	\only<6>{\fig[r]{.4}{WF200N-5}[Single waveform 5 \SI[retain-explicit-plus]{-200}{\volt}]}
+	
+	\begin{itemize}
+		\item pulses show a second peak while coming down
+	\end{itemize}
+	
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FRAME 4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Waveform Integration / SNR}
+	
+	\fig[r]{.5}{SNRs}
+	
+	\begin{itemize}\itemfill
+		\item choosing the integration width around the peak of the pulse
+		\item chosen values: \SI{1.5}{\nano\second} before and \SI{3}{\nano\second} after the pulse
+	\end{itemize}
+	
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FRAME 4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Signal Maps}
+	
+	\subfigs{\subfig{.5}[r]{SM200P}[\SI[retain-explicit-plus]{+200}{\volt}]}{\subfig{.5}[r]{SM200N}[\SI[retain-explicit-plus]{+200}{\volt}]}
+	
+	\begin{itemize}\itemfill
+		\item test
 	\end{itemize}
 	
 \end{frame}
