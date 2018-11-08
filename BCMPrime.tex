@@ -1,0 +1,33 @@
+% BEGIN PREAMBEL
+\documentclass[9pt, xcolor=dvipsnames, table]{beamer}
+\usepackage[british]{babel}
+\input{extrapackages}
+\input{newcommands}
+\input{settings}
+
+\title[BCM' at PSI]{Single and Double Channel Measurements of the BCM' at PSI}
+\subtitle{RD42 Meeting, Ljubljana}
+\titlegraphic{Setup}
+% END PREAMBEL
+
+\begin{document}
+
+{\setbeamertemplate{headline}{}
+\setbeamertemplate{footline}{}
+\maketitle}
+
+% ======= TABLE OF CONTENTS ============
+{\setbeamertemplate{headline}{}
+\begin{frame}{Table of Contents}%[allowframebreaks]
+	\tableofcontents[hideallsubsections]   % [pausesections]
+\end{frame}}
+
+
+\include{Introduction}
+\include{TestSite}
+\include{Results}
+\include{Conclusion}
+\include{DelFin}  % FINAL PAGE
+
+\end{document} % DOCUMENT END
+

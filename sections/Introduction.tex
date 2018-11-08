@@ -1,0 +1,72 @@
+\section{Introduction}
+\subsection{Introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FRAME 0 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Introduction}
+
+	\begin{itemize}\itemfill
+		\item after troubles at CERN also measured BCM' at PSI
+		\begin{itemize}
+			\item high particle rate
+			\item much lower spatial resolution of the telescope
+		\end{itemize}\hfill
+		\item measured two diamonds with different readout boxes:
+	\end{itemize}
+
+	\begin{table}\centering\alternatecolors
+		\begin{tabular}{rcc}\rowcolor{darkgray!50}\noalign{\hrule height 1.3pt}
+											& \textbf{??}										& \textbf{II6-H8}								\\
+			manufacturer 		& II-VI Inc.										& II-VI Inc.										\\
+			diamond type 		& poly-crystal									& poly-crystal									\\
+			size						& \SI{\sim4x4}{\milli\meter}		& \SI{\sim4x4}{\milli\meter}		\\
+			thickness				& \SI{\sim500}{\micro\meter}		& \SI{\sim500}{\micro\meter}		\\
+			amplifier				& new OSU fast Amp							& new OSU fast Amp							\\
+			readout box			& \bad{1}												& \bad{2}												\\\noalign{\hrule height 1.3pt}
+% 				 	& 			& 			\\
+		\end{tabular}
+	\end{table}
+	
+	\begin{itemize}\itemfill
+		\item maximum 1 out of 4 amplifier channels per chip can be read out at once
+		\item box 1: original box that blew up the electronics at CERN
+		\begin{itemize}
+			\item internal LV distribution
+			\item maximum HV of \SI{300}{\volt}
+		\end{itemize}
+		\item box 2: different casing with all LV components of box 1 but different HV connector
+	\end{itemize}
+
+	
+\end{frame}
+
+\subsection{Measurements}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FRAME 1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Measurements}
+
+	\begin{itemize}\itemfill
+		\item avoid noise from programming pc:
+		\item lock programming into the amps before every change of channel or chip configuration
+		\begin{itemize}
+			\item connect \SI{500}{\milli\volt} supply voltage 
+			\item hook up DB connector to the readout boxes
+			\item program chip 
+			\item disconnect DB
+			\item ground supply voltage line
+		\end{itemize}
+	\item every data run is preceded by a pumping run at high rate of the same duration
+	\end{itemize}
+
+
+	\begin{table}\centering\alternatecolors
+		\begin{tabular}{ccccc}\rowcolor{darkgray!20}\noalign{\hrule height 1.3pt}
+			\textbf{Box}	& \textbf{Chip}	& \textbf{Channel}	& \textbf{Bias [V]}	& \textbf{Events [M]}	\\ 
+			1							&	1				 			& 1									&	\SI{\pm200}{}			& 0.8\\
+			1							&	1				 			& 1									&	\SI{\pm300}{}			& 0.8\\
+			1							&	2			 				& 1									&	\SI{\pm200}{}			& 0.8\\
+			1							&	2				 			& 1									&	\SI{\pm300}{}			& 0.8\\
+			1							&	1 \& 2	 			& 1									&	\SI{\pm200}{}			& 0.8\\\hline
+			2							&	1 \& 2	 			& 1									&	\SI{\pm500}{}			& 1.6\\
+			2							&	1 \& 2	 			& 1									&	\SI{\pm1000}{}		& 1.6\\\noalign{\hrule height 1.3pt}
+		\end{tabular}
+	\end{table}
+	
+\end{frame}

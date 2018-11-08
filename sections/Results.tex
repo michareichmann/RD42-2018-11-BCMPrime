@@ -1,0 +1,56 @@
+\section{Results}
+\subsection{Leakage Currents}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FRAME 0 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Box 1}
+
+	\begin{itemize}\itemfill
+		\item all pads/channels of the two amplifier chips are connected to the same HV line
+		\item pumping at higher rate induces leakage current in the sensor
+	\end{itemize}\vspace*{-10pt}
+	
+	\only<1>{\fig[r]{.45}{LC200}[Box 1 at \SI[retain-explicit-plus]{+200}{\volt}]}
+	\only<2>{\fig[r]{.45}{LC300}[Box 1 at \SI[retain-explicit-plus]{+300}{\volt}]}\vspace*{-10pt}
+	
+	\begin{itemize}
+		\item<1-> stable behaviour at \SI[retain-explicit-plus]{+200}{\volt}
+		\item<2> erratic currents up to \orderof{\SI{2}{\micro\ampere}} at high rates at \SI[retain-explicit-plus]{+300}{\volt}
+	\end{itemize}
+	
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FRAME 1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Box 2}
+	
+	\only<1>{\fig[r]{.45}{LCB2P}[Box 2 at positive voltage]}
+	\only<2->{\fig[r]{.45}{LCB2N}[Box 2 at negative voltage]}
+	
+	\begin{itemize}\itemfill
+		\item<1-> very stable behaviour up to \SI{\pm1}{\kilo\volt}
+		\item<1-> slight increase at \SI[retain-explicit-plus]{+1}{\kilo\volt}
+		\item<2-> exponential increase at \SI{-1}{\kilo\volt}
+		\item<3-> current positive independed of bias ...
+	\end{itemize}
+	
+\end{frame}
+
+\subsection{Waveforms}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FRAME 2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Positive Bias}
+
+	\begin{itemize}\itemfill
+		\item all signal polarities are opposite of the bias 
+		\item pumping at higher rate induces leakage current in the sensor
+	\end{itemize}\vspace*{-10pt}
+	
+	\only<1>{\fig[r]{.4}{WF200-0}[Single waveform 0 \SI[retain-explicit-plus]{+200}{\volt}]}
+	\only<2>{\fig[r]{.4}{WF200-1}[Single waveform 1 \SI[retain-explicit-plus]{+200}{\volt}]}
+	\only<3>{\fig[r]{.4}{WF200-2}[Single waveform 2 \SI[retain-explicit-plus]{+200}{\volt}]}
+	\only<4>{\fig[r]{.4}{WF200-3}[Single waveform 3 \SI[retain-explicit-plus]{+200}{\volt}]}
+	\only<5>{\fig[r]{.4}{WF200-4}[Single waveform 4 \SI[retain-explicit-plus]{+200}{\volt}]}
+	\only<6>{\fig[r]{.4}{WF200-5}[Single waveform 5 \SI[retain-explicit-plus]{+200}{\volt}]}
+	\only<7>{\fig[r]{.4}{WF200-6}[Single waveform 6 \SI[retain-explicit-plus]{+200}{\volt}]}
+	
+	\begin{itemize}
+		\item pulses usually have a flattish top and probably don't reach the maximum
+	\end{itemize}
+	
+\end{frame}

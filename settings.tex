@@ -1,0 +1,98 @@
+\usetheme{Boadilla}
+\graphicspath{ {pics/} }
+\makeatletter
+\def\input@path{ {sections/} }
+\makeatother
+\usecolortheme[named=darkgray]{structure}
+\useoutertheme{shadow}
+\beamertemplatenavigationsymbolsempty
+\makeindex
+\author[M. Reichmann]{Michael Reichmann}
+\institute[\textbf{\textit{ETH}}\scalebox{.6}{\textit{Z\"{u}rich}}]{Swiss Federal Institute of Technology Zurich}
+\AtBeginSection{{\setbeamertemplate{headline}{}\frame[noframenumbering]{\sectionpage}}}
+\sisetup{detect-weight=true, detect-family=true, range-units=single, range-phrase=$\ \sim\ $, separate-uncertainty=true, exponent-product=\ensuremath{\cdot}}
+
+\setbeamercolor{frametitle}{bg=darkgray!30!white, fg=darkgray}
+\setbeamercolor{date in head/foot}{bg=lightgray}
+\setbeamercolor{title in head/foot}{bg=darkgray, fg=lightgray}
+
+%% TITLE PAGE
+\defbeamertemplate*{title page}{customized}[1][] {
+
+  \vspace*{-20pt}
+	\begin{tikzpicture}[remember picture,overlay]
+		\node[at=(current page.center), opacity=0.3] {
+			\includegraphics[width=1.13\paperwidth]{bkg}};
+	\end{tikzpicture}
+	
+	\begin{minipage}[.2\textheight]{.4\textwidth}
+    \ETHlogo[4cm]
+	\end{minipage}\hfill
+	\begin{minipage}[.2\textheight]{.4\textwidth}
+    \begin{figure}[t]\flushright
+      \includegraphics[height=.9cm]{Logo_IPA_pos}
+    \end{figure}
+	\end{minipage}\vspace*{20pt}
+	
+	\begin{minipage}[.5\textheight]{\textwidth}
+    \fig{.5}{\inserttitlegraphic}
+	\end{minipage}
+	
+	\begin{block}{}
+		\centering
+		\vspace*{1pt}
+		\usebeamerfont{title}\usebeamercolor[fg]{title}\textbf{\inserttitle}\\\vspace*{5pt}
+		\usebeamerfont{subtitle}\insertsubtitle\\\vspace*{1pt}
+	\end{block}
+	\vspace*{10pt}
+	\centering
+	\color{black}
+	\usebeamerfont{author}\textbf{\insertauthor}\par\vspace*{5pt}
+	\usebeamerfont{date}\insertdate\par
+}
+
+%% FOOTLINE
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor\hspace*{2pt}
+    (\includegraphics[height=3.5pt]{ETHLogoWhite})
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertdate\hspace*{3em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{1ex}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+%% HEADLINE
+\setbeamertemplate{headline}
+{%
+  \leavevmode%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=3ex,dp=1.5ex]{section in head/foot}%
+    \hbox to .5\paperwidth{\hfil\insertsectionhead\hspace*{5pt}}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=3ex,dp=1.5ex]{subsection in head/foot}%
+    \hbox to .5\paperwidth{\hspace*{5pt}\insertsubsectionhead\hfil}
+  \end{beamercolorbox}%
+  \vspace*{1pt}
+}
+ 
+%% SECTION PAGE
+\setbeamertemplate{section page}
+{
+    \begin{centering}
+		\usebeamerfont{title}Section \insertsectionnumber\\\vspace*{.7cm}
+		\begin{beamerboxesrounded}[shadow=true, lower=frametitle]{}
+			\centering
+			\vspace*{3pt}
+			\usebeamerfont{frametitle}\textbf{\insertsection}\par
+			\vspace*{3pt}
+		\end{beamerboxesrounded}
+    \end{centering}
+}
